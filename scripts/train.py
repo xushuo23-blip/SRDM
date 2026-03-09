@@ -76,6 +76,7 @@ def main(_):
         gradient_accumulation_steps=config.train.gradient_accumulation_steps
         * num_train_timesteps,
     )
+    
     if accelerator.is_main_process:
         accelerator.init_trackers(
             project_name="ddpo-pytorch",
